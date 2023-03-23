@@ -1,3 +1,8 @@
 plotly.express
 pandas
 streamlit
+streamlit.components.v1
+plotly.express
+st_folium
+json
+Image
