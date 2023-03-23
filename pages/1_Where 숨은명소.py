@@ -29,9 +29,9 @@ with tab1:
       col1, col2 = st.columns([1, 1])
       with col1:
          visit=pd.read_csv('data/EDA관광방문객.csv',index_col='Unnamed: 0')
-         st.table(visit.head(10))
+         st.dataframe(visit.head(10))
       with col2:
-         fig1=px.bar(visit.head(10),x='행정구역', y='외국인/내국인',width=600)
+         fig1=px.bar(visit.head(10),x='행정구역', y='외국인/내국인',width=400)
          st.plotly_chart(fig1)
    st.write('')
    st.markdown('2. 면적당 관광명소가 **많은 지역**')
