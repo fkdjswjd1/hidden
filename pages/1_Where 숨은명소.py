@@ -64,7 +64,7 @@ with tab1:
    col1,col2=st.columns([1,1])
    with col1:
       st.markdown("#### :world_map: 숨은명소 순위평균 단계구분도")
-      code_sort_total = pd.read_csv('../data/2-3/숨은명소전체요소순위.csv', index_col='Unnamed: 0')
+      code_sort_total = pd.read_csv('data/숨은명소전체요소순위.csv', index_col='Unnamed: 0')
       with open('./data/TL_SCCO_SIG.json', encoding='utf-8') as f:
          geo = json.loads(f.read())
 
@@ -154,7 +154,7 @@ with tab2:
 
    with col3:
       if button:
-         m_path = './data/숨은명소 ' + item + ' ' + hiddenplace + '.html'
+         m_path = 'data/숨은명소 ' + item + ' ' + hiddenplace + '.html'
          m = open(m_path, 'r', encoding='utf-8')
          source_code = m.read()
          components.html(source_code,height=500,width=800)
