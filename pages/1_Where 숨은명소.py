@@ -41,6 +41,8 @@ with tab1:
       with col1:
          place=pd.read_csv('data/EDA관광명소.csv',index_col='Unnamed: 0')
          st.dataframe(place.head(10))
+         st.text('관광명소/면적컬럼의 수가 0.0001보다 작아서 0으로 출력됨 ')
+         st.text('그래프의 숫자 참고')
       with col2:
          fig1=px.bar(place.head(10),x='행정구역', y='관광명소/면적',width=500)
          st.plotly_chart(fig1)
@@ -157,7 +159,7 @@ with tab2:
          m_path = 'data/숨은명소 ' + item + ' ' + hiddenplace + '.html'
          m = open(m_path, 'r', encoding='utf-8')
          source_code = m.read()
-         components.html(source_code,height=500,width=800)
+         components.html(source_code,height=400,width=700)
 
    st.markdown("# ")
    st.markdown("# ")
