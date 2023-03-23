@@ -159,7 +159,7 @@ with tab2:
          m_path = 'data/숨은명소 ' + item + ' ' + hiddenplace + '.html'
          m = open(m_path, 'r', encoding='utf-8')
          source_code = m.read()
-         components.html(source_code,height=400,width=700)
+         components.html(source_code,height=500,width=600)
 
    st.markdown("# ")
    st.markdown("# ")
