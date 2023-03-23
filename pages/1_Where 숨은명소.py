@@ -28,7 +28,7 @@ with tab1:
    with st.expander(":date: 데이터 확인하기"):
       col1, col2 = st.columns([1, 1])
       with col1:
-         visit=pd.read_csv('../data/2-1/EDA관광방문객.csv',index_col='Unnamed: 0')
+         visit=pd.read_csv('data/EDA관광방문객.csv',index_col='Unnamed: 0')
          st.table(visit.head(10))
       with col2:
          fig1=px.bar(visit.head(10),x='행정구역', y='외국인/내국인',width=600)
@@ -39,7 +39,7 @@ with tab1:
    with st.expander(":date: 데이터 확인하기"):
       col1, col2 = st.columns([1, 1])
       with col1:
-         place=pd.read_csv('../data/2-2/EDA관광명소.csv',index_col='Unnamed: 0')
+         place=pd.read_csv('data/EDA관광명소.csv',index_col='Unnamed: 0')
          st.table(place.head(10))
       with col2:
          fig1=px.bar(place.head(10),x='행정구역', y='관광명소/면적',width=600)
@@ -50,7 +50,7 @@ with tab1:
    with st.expander(":date: 데이터 확인하기"):
       col1, col2 = st.columns([1, 1])
       with col1:
-         money=pd.read_csv('../data/2-3/EDA관광지출액.csv',index_col='Unnamed: 0')
+         money=pd.read_csv('data/EDA관광지출액.csv',index_col='Unnamed: 0')
          money.rename(columns={'평균':'외국인/내국인지출액평균'},inplace=True)
          st.table(money.head(10))
       with col2:
