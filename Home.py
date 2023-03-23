@@ -32,7 +32,7 @@ st.write(" 대한민국은 방한여행시 외국인 재방문율이 낮은 편�
 
 st.markdown("---")
 
-df=pd.read_csv('data\연도별 외래관광객 입국 수 추이 결과.csv',index_col='Unnamed: 0')
+df=pd.read_csv('.\data\연도별 외래관광객 입국 수 추이 결과.csv',index_col='Unnamed: 0')
 cols=st.columns((1,2))
 cols[0].markdown('#### :date:연도별 외래관광객 입국 수 추이 표')
 cols[0].table(data=df)
