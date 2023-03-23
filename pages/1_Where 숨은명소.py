@@ -8,13 +8,14 @@ import folium
 from PIL import Image
 
 st.set_page_config(
-    layout='wide', # wide,centered
+   layout='wide', # wide,centered
+   page_icon=':bar_chart:'
 )
 st.subheader(':pushpin: 숨은명소란 ??')
 st.markdown("☞ 수도권을 제외한 **내국인 대비 외국인 관광 비중이 적은 지역**이라 정의")
 st.markdown("( 기준 : 관광방문객, 관광명소, 관광지출액 )")
 st.subheader(':pushpin: 관광인프라 ??')
-st.markdown("☞ 외국인들이 한국 여행 시 주로 방문하는 관광지 및 고려 요인을 나타냄")
+st.markdown("☞ 외국인들이 한국 여행 시 주로 방문하는 **관광지 및 고려 요인**을 나타냄")
 st.markdown("(선정 기준 : 문화체육관광부와 한국 관광공사의 “외래관광객조사”를 참고)")
 st.markdown("# ")
 

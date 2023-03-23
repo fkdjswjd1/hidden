@@ -2,7 +2,13 @@ import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
 
+st.set_page_config(
+   layout='wide', # wide,centered
+   page_icon=':bar_chart:'
+)
+
 st.title('전국 관광명소 map')
+
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(['식당', '쇼핑몰', '역사유적지', '전통문화체험', '박물관/미술관', '유명 촬영지', '숙박업소'])
 
