@@ -40,7 +40,7 @@ with tab1:
     i = '1'
 
     # 데이터 로드
-    df_map1 = pd.read_csv('../data/3/전처리_완료/지역별 식당 위치정보.csv', encoding='utf-8', index_col=0)
+    df_map1 = pd.read_csv('data/지역별 식당 위치정보.csv', encoding='utf-8', index_col=0)
 
     # 레이아웃 구성
     con1, con2, sb = st.columns([2, 2, 1])
