@@ -2,13 +2,12 @@ import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
 
+
 st.set_page_config(
    layout='wide', # wide,centered
    page_icon=':bar_chart:'
 )
-
 st.title('전국 관광명소 map')
-
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(['식당', '쇼핑몰', '역사유적지', '전통문화체험', '박물관/미술관', '유명 촬영지', '숙박업소'])
 
@@ -41,14 +40,14 @@ with tab1:
     i = '1'
 
     # 데이터 로드
-    df_map1 = pd.read_csv('data/지역별 식당 위치정보.csv', encoding='utf-8', index_col=0)
+    df_map1 = pd.read_csv('../data/3/전처리_완료/지역별 식당 위치정보.csv', encoding='utf-8', index_col=0)
 
     # 레이아웃 구성
     con1, con2, sb = st.columns([2, 2, 1])
 
     with con1:
         st.subheader('전국 단계구분도')
-        m = open('data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
+        m = open('./data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
 
@@ -60,7 +59,7 @@ with tab1:
 
     with con2:
         st.subheader('지역별 지도')
-        m_path = 'data/' + i + ' ' + option + '.html'
+        m_path = './data/' + i + ' ' + option + '.html'
         m = open(m_path, 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
@@ -75,14 +74,14 @@ with tab2:
     i = '2'
 
     # 데이터 로드
-    df_map1 = pd.read_csv('data/지역별 쇼핑몰 위치정보.csv', encoding='utf-8', index_col=0)
+    df_map1 = pd.read_csv('../data/3/전처리_완료/지역별 쇼핑몰 위치정보.csv', encoding='utf-8', index_col=0)
 
     # 레이아웃 구성
     con1, con2, sb = st.columns([2, 2, 1])
 
     with con1:
         st.subheader('전국 단계구분도')
-        m = open('data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
+        m = open('./data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
 
@@ -94,7 +93,7 @@ with tab2:
 
     with con2:
         st.subheader('지역별 지도')
-        m_path = 'data/' + i + ' ' + option + '.html'
+        m_path = './data/' + i + ' ' + option + '.html'
         m = open(m_path, 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
@@ -109,14 +108,14 @@ with tab3:
     i = '3'
 
     # 데이터 로드
-    df_map1 = pd.read_csv('data/지역별 역사유적지 위치정보.csv', encoding='utf-8', index_col=0)
+    df_map1 = pd.read_csv('../data/3/전처리_완료/지역별 역사유적지 위치정보.csv', encoding='utf-8', index_col=0)
 
     # 레이아웃 구성
     con1, con2, sb = st.columns([2, 2, 1])
 
     with con1:
         st.subheader('전국 단계구분도')
-        m = open('data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
+        m = open('./data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
 
@@ -128,7 +127,7 @@ with tab3:
 
     with con2:
         st.subheader('지역별 지도')
-        m_path = 'data/' + i + ' ' + option + '.html'
+        m_path = './data/' + i + ' ' + option + '.html'
         m = open(m_path, 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
@@ -143,14 +142,14 @@ with tab4:
     i = '4'
 
     # 데이터 로드
-    df_map1 = pd.read_csv('data/지역별 전통체험 위치정보.csv', encoding='utf-8', index_col=0)
+    df_map1 = pd.read_csv('../data/3/전처리_완료/지역별 전통체험 위치정보.csv', encoding='utf-8', index_col=0)
 
     # 레이아웃 구성
     con1, con2, sb = st.columns([2, 2, 1])
 
     with con1:
         st.subheader('전국 단계구분도')
-        m = open('data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
+        m = open('./data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
 
@@ -162,7 +161,7 @@ with tab4:
 
     with con2:
         st.subheader('지역별 지도')
-        m_path = 'data/' + i + ' ' + option + '.html'
+        m_path = './data/' + i + ' ' + option + '.html'
         m = open(m_path, 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
@@ -178,14 +177,14 @@ with tab5:
     i = '5'
 
     # 데이터 로드
-    df_map1 = pd.read_csv('data/지역별 박물관+미술관 위치정보.csv', encoding='utf-8', index_col=0)
+    df_map1 = pd.read_csv('../data/3/전처리_완료/지역별 박물관+미술관 위치정보.csv', encoding='utf-8', index_col=0)
 
     # 레이아웃 구성
     con1, con2, sb = st.columns([2, 2, 1])
 
     with con1:
         st.subheader('전국 단계구분도')
-        m = open('data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
+        m = open('./data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
 
@@ -197,7 +196,7 @@ with tab5:
 
     with con2:
         st.subheader('지역별 지도')
-        m_path = 'data/' + i + ' ' + option + '.html'
+        m_path = './data/' + i + ' ' + option + '.html'
         m = open(m_path, 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
@@ -212,14 +211,14 @@ with tab6:
     i = '6'
 
     # 데이터 로드
-    df_map1 = pd.read_csv('data/지역별 촬영지 위치정보.csv', encoding='utf-8', index_col=0)
+    df_map1 = pd.read_csv('../data/3/전처리_완료/지역별 촬영지 위치정보.csv', encoding='utf-8', index_col=0)
 
     # 레이아웃 구성
     con1, con2, sb = st.columns([2, 2, 1])
 
     with con1:
         st.subheader('전국 단계구분도')
-        m = open('data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
+        m = open('./data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
 
@@ -231,7 +230,7 @@ with tab6:
 
     with con2:
         st.subheader('지역별 지도')
-        m_path = 'data/' + i + ' ' + option + '.html'
+        m_path = './data/' + i + ' ' + option + '.html'
         m = open(m_path, 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
@@ -246,14 +245,14 @@ with tab7:
     i = '7'
 
     # 데이터 로드
-    df_map1 = pd.read_csv('data/지역별 숙박업소 위치정보.csv', encoding='utf-8', index_col=0)
+    df_map1 = pd.read_csv('../data/3/전처리_완료/지역별 숙박업소 위치정보.csv', encoding='utf-8', index_col=0)
 
     # 레이아웃 구성
     con1, con2, sb = st.columns([2, 2, 1])
 
     with con1:
         st.subheader('전국 단계구분도')
-        m = open('data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
+        m = open('./data/' + i + ' 전국 단계구분도.html', 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)
 
@@ -265,7 +264,7 @@ with tab7:
 
     with con2:
         st.subheader('지역별 지도')
-        m_path = 'data/' + i + ' ' + option + '.html'
+        m_path = './data/' + i + ' ' + option + '.html'
         m = open(m_path, 'r', encoding='utf-8')
         source_code = m.read()
         components.html(source_code, height=700)

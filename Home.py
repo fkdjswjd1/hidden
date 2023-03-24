@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-# 페이지 기본 설정
 
+# 페이지 기본 설정
 st.set_page_config(
     page_title='숨은명소 찾아보기 ',
     page_icon=':bar_chart:',
@@ -16,7 +16,7 @@ st.set_page_config(
 
 
 
-
+# header
 st.title(": HiddenPlace Analysis")
 st.markdown("##")
 
@@ -31,14 +31,20 @@ st.write(" 대한민국은 방한여행시 외국인 재방문율이 낮은 편�
          "이에 정부는 제 6차 관광진흥 기본계획 (2023~2027)을 통해 국내 관광 생태계를 회복하고 관광산업을 혁신하려고 한다. ")
 
 st.markdown("---")
-
 df=pd.read_csv('data/연도별 외래관광객 입국 수 추이 결과.csv',index_col='Unnamed: 0')
+
+# 레이아웃 설정
 cols=st.columns((1,2))
+
+# 왼쪽에는 표
 cols[0].markdown('#### :date:연도별 외래관광객 입국 수 추이 표')
+cols[0].markdown('출처 : 한국문화관광연구원')
 cols[0].table(data=df)
+
+# 오른쪽에는 선그래프
 cols[1].markdown('#')
 cols[1].markdown('#### :chart_with_downwards_trend:연도별 외래관광객 입국 수 추이 그래프')
-
+# 선그래프
 fig = px.line(df, x=df.index, y='인원(명)',markers=True,height=500)
 fig.update_layout(
     plot_bgcolor = "rgba(200, 150, 10, 0.3)",
