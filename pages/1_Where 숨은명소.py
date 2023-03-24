@@ -38,7 +38,7 @@ with tab1:
    with st.expander(":date: 데이터 확인하기"):
       col1, col2 = st.columns([1, 1])
       with col1: # 왼쪽에는 표
-         visit=pd.read_csv('../data/2-1/EDA관광방문객.csv',index_col='Unnamed: 0')
+         visit=pd.read_csv('data/EDA관광방문객.csv',index_col='Unnamed: 0')
          visit.iloc[:, -1] = visit.iloc[:, -1] * 100
          visit.rename(columns={'외국인/내국인': '외국인/내국인*100'}, inplace=True)
          visit.index = visit.index+1
@@ -56,7 +56,7 @@ with tab1:
    with st.expander(":date: 데이터 확인하기"):
       col1, col2 = st.columns([1, 1])
       with col1: # 왼쪽에는 표
-         place=pd.read_csv('../data/2-2/EDA관광명소.csv',index_col='Unnamed: 0')
+         place=pd.read_csv('data/EDA관광명소.csv',index_col='Unnamed: 0')
          place.iloc[:, -1] = place.iloc[:, -1] * 10000
          place.rename(columns={'관광명소/면적': '관광명소/면적*10000'}, inplace=True)
          place.index = place.index+1
@@ -74,7 +74,7 @@ with tab1:
    with st.expander(":date: 데이터 확인하기"):
       col1, col2 = st.columns([1, 1])
       with col1: # 왼쪽에는 표
-         money=pd.read_csv('../data/2-3/EDA관광지출액.csv',index_col='Unnamed: 0')
+         money=pd.read_csv('data/EDA관광지출액.csv',index_col='Unnamed: 0')
          money.iloc[:, -1] = money.iloc[:, -1] * 100
          money.rename(columns={'평균': '외국인/내국인지출액평균*100'}, inplace=True)
          money.index = money.index+1
@@ -93,10 +93,10 @@ with tab1:
    col1,col2=st.columns([1,1])
    with col1:# 왼쪽에는 단계구분도
       st.markdown("#### :world_map: 숨은명소 순위평균 단계구분도")
-      code_sort_total = pd.read_csv('../data/2-3/숨은명소전체요소순위.csv', index_col='Unnamed: 0')
+      code_sort_total = pd.read_csv('data/숨은명소전체요소순위.csv', index_col='Unnamed: 0')
 
       # 방법1) folium을 이용한 단계구분도
-      with open('./data/TL_SCCO_SIG.json', encoding='utf-8') as f:
+      with open('data/TL_SCCO_SIG.json', encoding='utf-8') as f:
          geo = json.loads(f.read())
       m = folium.Map(location=[36.5, 127.5],
                      zoom_start=7)
