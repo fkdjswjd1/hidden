@@ -29,7 +29,7 @@ tab1, tab2= st.tabs(["Where 숨은명소","숨은명소 관광인프라 In Map"]
 with tab1:
    # tab안에서 header
    st.header("	:grey_question: Where 숨은명소 ")
-   st.write('')
+   st.markdown('# ')
 
    # 1. 관광방문객
    st.markdown('1. 내국인 방문객 대비 외국인 방문객이 **적은 지역** 순위')
