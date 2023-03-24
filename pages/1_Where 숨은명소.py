@@ -41,7 +41,8 @@ with tab1:
          visit=pd.read_csv('data/EDA관광방문객.csv',index_col='Unnamed: 0')
          visit.iloc[:, -1] = visit.iloc[:, -1] * 100
          visit.rename(columns={'외국인/내국인': '외국인/내국인*100'}, inplace=True)
-         visit.index = str(visit.index+1)+'순위'
+         visit.index = visit.index+1
+         visit.index=visit.index.astype(str)+'순위'
          st.table(visit.head(10))
 
       with col2: #오른쪽에는 막대그래프
@@ -59,7 +60,7 @@ with tab1:
          place=pd.read_csv('data/EDA관광명소.csv',index_col='Unnamed: 0')
          place.iloc[:, -1] = place.iloc[:, -1] * 10000
          place.rename(columns={'관광명소/면적': '관광명소/면적*10000'}, inplace=True)
-         place.index = str(place.index+1)+'순위'
+         place.index = place.index+1
          st.table(place[['행정구역', '관광명소', '면적', '관광명소/면적*10000']].head(10))
          st.text('관광명소 수와 면적의 단위가 크게 상이하여 100 대신 10000을 곱함')
       with col2: #오른쪽에는 막대그래프
@@ -77,7 +78,7 @@ with tab1:
          money=pd.read_csv('data/EDA관광지출액.csv',index_col='Unnamed: 0')
          money.iloc[:, -1] = money.iloc[:, -1] * 100
          money.rename(columns={'평균': '외국인/내국인지출액평균*100'}, inplace=True)
-         money.index = str(money.index+1)+'순위'
+         money.index = money.index+1
          st.table(money.head(10))
       with col2: #오른쪽에는 막대그래프
          fig1=px.bar(money.head(10),x='행정구역', y='외국인/내국인지출액평균*100',width=500)
