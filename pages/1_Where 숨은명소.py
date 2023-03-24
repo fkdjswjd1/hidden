@@ -88,7 +88,7 @@ with tab1:
 
 
    st.write('')
-   st.markdown(':arrow_forward:  각 기준의 순위를 매겨 **순위평균**으로 정함.')
+   st.markdown('#### ▶ 각 기준의 순위를 매겨 **순위평균**으로 정함.')
    st.latex(r'\dfrac{RankVisit + RankPlace + RankMoney}{3}')
 
    st.markdown("---")
