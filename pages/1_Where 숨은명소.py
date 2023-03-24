@@ -195,7 +195,7 @@ with tab2:
 
    with col3:
       if button: # 버튼이 눌리면 지도 출력
-         m_path = './data/숨은명소 ' + item + ' ' + hiddenplace + '.html'
+         m_path = 'data/숨은명소 ' + item + ' ' + hiddenplace + '.html'
          m = open(m_path, 'r', encoding='utf-8')
          source_code = m.read()
          components.html(source_code,height=500,width=800)
