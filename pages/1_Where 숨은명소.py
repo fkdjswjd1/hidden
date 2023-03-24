@@ -118,6 +118,7 @@ with tab1:
 
    with col2: # 오른쪽에는 표
       st.markdown("#### :date: 숨은명소 순위평균")
+      st.text('전체 172 중')
       rank=code_sort_total[['행정구역','visit_rank','place_rank','money_rank','순위평균']].head(5)
       rank.index=['1순위','2순위','3순위','4순위','5순위']
       st.dataframe(data=rank)
